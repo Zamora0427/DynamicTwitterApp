@@ -62,6 +62,8 @@ const currentUser = users[userKey];
 const profileContainer = document.getElementById("profile-container");
 const tweetsContainer = document.getElementById("tweets-container");
 const coverPhoto = document.querySelector(".cover-photo");
+const avatar = document.querySelector(".avatar");
+avatar.src = currentUser.avatarURL;
 
 // ======= Render Functions =======
 function renderProfile(user) {
@@ -83,7 +85,6 @@ function renderProfile(user) {
 
   profileContainer.appendChild(profile);
 }
-
 
 function renderTweets(user) {
   user.tweets.forEach(tweet => {
