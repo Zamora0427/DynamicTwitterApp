@@ -21,11 +21,6 @@ body {
   text-align: center;
 }
 
-.cover-photo {
-  height: 150px;
-  background: url('https://placehold.co/600x150') center/cover no-repeat;
-}
-
 .avatar {
   width: 80px;
   height: 80px;
@@ -49,21 +44,37 @@ body {
   color: #14171a;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-}
-
 .profile img.avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
 }
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+.cover-photo {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
+
+.profile {
+  position: relative;
+  padding-top: 0; /* no extra top padding */
+}
+
+.avatar {
+  position: absolute;
+  bottom: -40px; /* place halfway over the cover */
+  left: 20px;    /* align left within padding */
+  width: 80px;
+  height: 80px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: white; /* in case image has transparency */
+}
+
+.profile-info {
+  margin-top: 50px; /* push name/details below the avatar */
+  padding-left: 120px; /* create left space for avatar */
+}
+
